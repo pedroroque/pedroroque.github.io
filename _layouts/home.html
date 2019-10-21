@@ -1,18 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
 {% include head.html %}
 
-<body>
-    {% include header.html %}
-    <div class="container-fluid">
-        <div class="row">
-            {% include aboutme.html %}
-            <div class="main-content"></div>
+<body class="h-100">
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#" data-placement="right" data-animation="false" data-toggle="tooltip"
+                title="Aller à Mes Summaries">{{ site.title }}</a>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main role="main" class="container-fluid">
+        <div class="row h-100">
+            <aside class="col-sm-12 col-xl-3 bg-dark h-100">
+                <div class="container h-100">
+                    <div class="row sidebarlogo">
+
+                    </div>
+                    <div class="row sidebartext">
+                        <p>bla bla bla</p>
+                    </div>
+
+                    <div class="row" >
+                        <footer class="page-footer" style="border-color: rebeccapurple;">
+                            <nav class="navbar navbar-toggleable-md navbar-inverse bg-dark">
+
+                                <a class="fa-stack fa-2x" data-toggle="tooltip" title="Twitter" data-placement="top"
+                                    href={{site.twitter_link}}>
+                                    <i class="fa fa-twitter fa-stack-2x "></i>
+                                </a>
+                                <a class="fa-stack fa-2x" data-toggle="tooltip" title="Twitter" data-placement="top"
+                                    href={{site.twitter_link}}>
+                                    <i class="fa fa-linkedin fa-stack-2x"></i></a>
+                                <a class="fa-stack fa-2x" data-toggle="tooltip" title="Twitter" data-placement="top"
+                                    href={{site.twitter_link}}>
+                                    <i class="fa fa-github fa-stack-2x"></i></a>
+
+                            </nav>
+                        </footer>
+                    </div>
+                </div>
+                <div class>
+
+
+
+                </div>
+            </aside>
+            <div class="col-sm-12 col-xl-6">
+            </div>
         </div>
-    </div>
+    </main>
 
 
-    {% include footer.html %}
+
 </body>
+
+
 
 </html>
