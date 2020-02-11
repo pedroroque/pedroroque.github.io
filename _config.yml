@@ -41,7 +41,7 @@ plainwhite:
     linkedIn: in/pedro-roque-89b01810/
 
 # Build settings
-theme: plainwhite
+#theme: plainwhite
 remote_theme: thelehhman/plainwhite-jekyll
 plugins:
   - jekyll-feed
