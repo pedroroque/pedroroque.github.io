@@ -34,6 +34,7 @@ plainwhite:
   name: Pedro Roque
   tagline: Software Architect
   date_format: "%-d %b, %Y"
+  analytics_id: "UA-158365743-1"
 
   social_links:
     twitter: highonsoftware
