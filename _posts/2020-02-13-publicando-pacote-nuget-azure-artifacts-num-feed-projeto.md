@@ -5,7 +5,7 @@ date:   2020-02-13 18:55:37 -0300
 categories: devops azure pipelines
 ---
 
-Há muito tempo que é possível criar e comnpartilhar feeds de pacotes (Nuge e não só) no Azure Artifacts.
+Há muito tempo que é possível criar e comnpartilhar feeds de pacotes (Nuget e não só) no Azure Artifacts.
 
 Se antigamente era uma opção relativamente cara, com as alterações efetuadas no preçário dos serviços durante o ano passado, a utilização do serviço passou a um 'no brainer' total. 2 GB gratuitos dá pra guardar muito pacote!
 
