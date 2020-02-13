@@ -1,7 +1,0 @@
----
-layout: post
-title:  "Publicando um pacote nuget no Azure Artifacts, num feed com escopo de projeto"
-date:   2020-02-13 19:42:37 -0300
-categories: devops azure pipelines
----
-
