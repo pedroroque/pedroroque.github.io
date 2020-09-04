@@ -13,7 +13,7 @@ O objetivo deste post é mostrar como o SonarCloud pode ser integrado num Pipeli
 
 Partindo do princípio de que já foi criada uma conexão de serviço no Azure para o SoundCloud, vamos começar com um pipeline padrão de validação de PR.
 
-```YAML
+```yaml
 trigger: none
 
 pool:
@@ -61,7 +61,7 @@ Para gerar o relatório de cobertura de testes são necessários três passos:
 2. modificar o passo de teste, para coletar os dados de cobertura
 3. adicionar uma tarefa para publicar o relatório de cobertura
 
-```YAML
+```yaml
   - task: DotNetCoreCLI@2
     name: "RunTests"
     displayName: "dot net test $(buildConfiguration)"
@@ -86,7 +86,7 @@ Para fazermos a integração com SonarCloud, precisamos adicionar 3 novoa etapas
 
 1. Preparar a análize de código pelo SonarCloud, imadiatemente antes da etape de build
 
-```YAML
+```yaml
   - task: SonarCloudPrepare@1
     inputs:
       SonarCloud: $(sonar.connection)
@@ -105,7 +105,7 @@ Para podermos ter o relatório de cobertura de código tanto no Azure Pipelines 
 
 Como solução, geramos o relatório no formato OpenCover e adicionamos um script para converter para Cobertura. 
 
-```YAML
+```yaml
   - task: DotNetCoreCLI@2
     name: "RunTests"
     displayName: "dot net test $(buildConfiguration)"
@@ -129,7 +129,7 @@ Como solução, geramos o relatório no formato OpenCover e adicionamos um scrip
 ```
 3. Por fim, executamos o Code Analyse e publicamos os resultados
 
-```YAML
+```yaml
   - task: SonarCloudAnalyze@1
 
   - task: PublishCodeCoverageResults@1
@@ -145,7 +145,7 @@ Como solução, geramos o relatório no formato OpenCover e adicionamos um scrip
 
 Pipeline completo:
 
-```YAML
+```yaml
 trigger: none
 
 pool:
